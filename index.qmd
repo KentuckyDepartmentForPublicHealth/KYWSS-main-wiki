@@ -1,0 +1,67 @@
+---
+title: "KYWSS Code Repo Wiki"
+---
+
+# KYWSS Code Repository
+This wiki is for the primary KYWSS code repo. It is currently the catch-all for all KYWSS programming with both R and Python. The most important project is the wastewater data pipeline (ETL), which appends, validates, uploads to 1CDP, and calculates important metrics for our public and private dashboards and analyses. The repo contains 9 routinely used scripts (8 python; 1 R) with over 2000 lines of custom code in total and 800 additional lines of code adapted for use by KYWSS.
+
+The following pages describe how to get started using this code repo.
+
+# Wiki Pages
+1. [Software install](wiki/software_install_README.qmd)
+2. [Setting up project environment](wiki/setting-up-environment.qmd)
+3. [Running the data pipeline](wiki/run_pipeline.qmd)
+4. [Spatial features](wiki/spatial_features.qmd)
+5. [Dashboard data README](wiki/dashboard_data_README.qmd)
+6. [Internal dashboard deployment](wiki/internal_dash_deploy.qmd)
+7. [NWSS WVAL Calc README](wiki/WVAL_README.qmd)
+
+<br>
+
+# System requirements
+1. R ver. 4.4.1
+2. python ver. 3.11.9
+3. spark and hadoop installation
+4. IDE recommended
+
+<br>
+
+# I/O File List
+## Input files
+1. KYWSS_regions.csv
+2. KY_wastewater_sites.xlsx
+3. KySewersheds.geojson
+4. Ky_County_Polygons_WM_-3915653526132611478.geojson
+5. Ky_County_Polygons_WM_344776173949753501.csv
+6. DLS+UK+UL_COMBINED_Data.csv
+7. Ky_Major_Roads.geojson
+8. PLACES__County_Data__GIS_Friendly_Format___2024_release.csv
+9. WW_Popoulation.csv
+
+## Output files
+### Pipeline
+`WW_data_pipeline.py` produces the folliwng files in the `data/` directory.
+1.  ww_features.csv (site features for public and internal dashboard)
+2.  KYWSS_WVAL_sewershed.csv (For public dashboard)
+3.  KYWSS_WVAL_region.csv (For public dashboard)
+4.  KYWSS_WVAL_state.csv (For public dashboard)
+5.  kywss_data.csv (For internal dashboard)
+6.  kywss_data_LOD.csv (For internal dashboard)
+
+### Spatial Features
+`WW_spatial_data.R` produces the folliwng files in the `data/spatial-data/` directory.
+1. ky_sewersheds_polygons.geojson
+2. ky_sewersheds_centroids.geojson
+3. ky_state_line.geojson
+4. ky_region_line.geojson
+5. ky_region_centroids.geojson
+6. ky_region_labels.geojson
+7. ky_counties_line.geojson
+8. ky_counties_poly.geojson
+9. ky_counties_centroids.geojson
+10. ky_sewershed_poly_all.geojson
+11. ky_interstate_US.geojson
+
+# Script List
+1. `WW_data_pipeline.py`: Orchestrates processing of data using multiple scripts and steps
+2.

@@ -1,0 +1,24 @@
+---
+title: "Running the data pipeline"
+---
+
+# How to run the wastewater data pipeline (ETL)
+The full pipeline is run using [WW_data_pipeline.py](../../WW_data_pipeline.py).
+
+After installing [system requirements](software_install_README.md) and [setting up your environment](setting-up-environment.md), you will be able to run `WW_data_pipeline.py`
+
+Open Command Prompt in project directory, and run:
+```python
+python WW_data_pipeline.py
+```
+
+Or, open the project in VSCode/Positron, open the script, and click run in terminal.
+
+# Output files
+`WW_data_pipeline.py` produces the folliwng files in the `data/` directory.
+1.  ww_features.csv (site features for public and internal dashboard)
+2.  KYWSS_WVAL_sewershed.csv (For public dashboard)
+3.  KYWSS_WVAL_region.csv (For public dashboard)
+4.  KYWSS_WVAL_state.csv (For public dashboard)
+5.  kywss_data.csv (For internal dashboard)
+6.  kywss_data_LOD.csv (For internal dashboard)

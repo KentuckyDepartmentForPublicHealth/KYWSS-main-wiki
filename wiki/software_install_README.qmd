@@ -1,0 +1,88 @@
+---
+title: "Software install"
+---
+
+# System requirements
+1. R ver. 4.4.1
+2. python ver. 3.11.9
+3. spark and hadoop installation
+4. IDE recommended
+
+# R
+
+Use the software center to download R version 4.4.1 or install via the [R Project Website](https://www.r-project.org/).
+
+# Python
+
+Install python version 3.11.9 (specifically!) from [python.org](https://www.python.org/downloads/release/python-3119/)
+
+# IDE
+
+I recommend the Positron IDE from Posit. Download the "user level install" version here: [Positron Downloads](https://positron.posit.co/download.html)
+
+# Spark/ Hadoop
+
+Installing Spark on Windows machines is not straight forward. There are specific steps to take outlined below:
+
+1.  Install Python version 3.11.9
+
+2.  Install Spark;
+
+    -   Open PowerShell or cmd and run the following: `pip install pyspark`
+
+3.  Install Java
+
+    -   Download the zipped folder from KYWSS Teams channel files folder: [openjdk-22.0.1_windows-x64_bin.zip](https://kymsoffice.sharepoint.com/:u:/r/teams/WastewaterBasedEpidemiologyCHFSDPHKWSS-MSTeams/Shared%20Documents/Python%20Development/openjdk-22.0.1_windows-x64_bin.zip?csf=1&web=1&e=fDROpl)
+    -   Extract the folder to a user folder, like appdata (e.g. `C:\Users\daniel.cooper\AppData\Local\Programs\jdk-22.0.1`).
+    -   To quickly get to your appdata folder, type "run" in your Windows search, click "Run", then type "appdata" followed by the enter key to open the folder.
+    -   File paths are crucial to step 5 below.
+
+1.  Install winutils
+
+    -   Download from KYWSS Teams channel folder: [winutils.zip](https://kymsoffice.sharepoint.com/:u:/r/teams/WastewaterBasedEpidemiologyCHFSDPHKWSS-MSTeams/Shared%20Documents/Python%20Development/winutils.zip?csf=1&web=1&e=TuGODe)
+    -   Extract the folder to a user folder, like appdata (e.g. `C:\Users\daniel.cooper\AppData\Local\Programs\winutils`).
+
+2.  Edit Window's Environment Variables
+
+    -   Add or Edit the following variables. For PATH, edit and add a new value to the list.
+
+| Variable Name  | Variable Value                                                             | Notes                                                                          |
+|:---------------|:---------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| JAVA_HOME      | C:\Users\daniel.cooper\AppData\Local\Programs\jdk-22.0.1                   | Path to new Java folder                                                        |
+| HADOOP_HOME    | C:\Users\daniel.cooper\AppData\Local\Programs\winutils                     | Path to new winutils folder                                                    |
+| PYSPARK_PYTHON | C:\Users\daniel.cooper\AppData\Local\Programs\Python\Python311\\python.exe | Path to your python.exe file; to find easily: open cmd, run `where.exe python` |
+| PATH           | %JAVA_HOME%\bin                                                            | Inside your `jdk-22.0.1` folder, there should be a folder called `bin`         |
+| PATH           | %HADOOP_HOME%\bin                                                          | Inside your `winutils` folder, there should be a folder called `bin`           |
+
+6.  Validate PySpark Install
+
+    - type `pyspark` command in cmd
+
+# Windows Environment Variables
+
+To edit environment variables in Windows, do:
+
+1. Click search on your task bar
+
+2. Search "Environment"
+
+3. Click "Edit environment variables for your account" (NOTE: clicking to edit "system variables" will not work because it requires admin elevation)
+
+4. Click "New"
+
+5. Give the variable a name and a value.
+
+    - Value's are often file paths
+
+Example:
+
+![](windows-env-vars-example.png)
+
+# Sources:
+
+1.  [General Pyspark installation Guide](https://sparkbyexamples.com/pyspark-tutorial/#pyspark-installation)
+2.  [Download and Install OpenJDK 17](https://www.codejava.net/java-se/download-and-install-openjdk-17)
+3.  [Download OpenJDK 17](https://jdk.java.net/22/)
+4.  [Download winutils.exe](https://github.com/steveloughran/winutils/tree/master/hadoop-3.0.0/bin)
+5.  [Spark environment vars](https://stackoverflow.com/questions/30279783/apache-spark-how-to-use-pyspark-with-python-3)
+6.  [winutils environment vars](https://stackoverflow.com/questions/50637728/pyspark-failed-to-locate-the-winutils-binary-in-the-hadoop-binary-path)

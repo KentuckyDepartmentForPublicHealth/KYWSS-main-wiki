@@ -1,0 +1,24 @@
+---
+title: "Internal dashboard deployment"
+---
+
+# Internal Dashboard shinyapps.io deployment (and data updating)
+
+The Internal dashboard is hosted on the KDPH shinyapps.io server. Adam Berrones is the current administrator. With his help (admin privileges), we set up a “GitHub Action” to automate deploying the Shiny application (our dashboard) to the server. To update data in the dashboard, the data inside the application’s code repo must be updated and the app re-deployed to shinyapps.io. In the future, this may change if we begin hosting our data in the cloud/in a hosted database.
+
+## Code Repo
+The internal dashboard code repo is located here: [https://github.com/KentuckyDepartmentForPublicHealth/KYWSS-Internal-App](https://github.com/KentuckyDepartmentForPublicHealth/KYWSS-Internal-App).
+
+The GitHub Action is defined by the build.yml file: [build.yml](https://github.com/KentuckyDepartmentForPublicHealth/KYWSS-Internal-App/blob/shiny-deploy/.github/workflows/build.yml)
+
+- **The Action is automated to run and deploy the app every Wednesday Morning at 7AM, so new data must be uploaded Tuesday each week.**
+- However, the Action/ workflow can manually be triggered if needed.
+
+
+## Updating data only
+To update data weekly, one can push new data to the "shiny-deploy" branch (default branch). This can be as easy as:
+1. Navigating to the [data folder](https://github.com/KentuckyDepartmentForPublicHealth/KYWSS-Internal-App/tree/shiny-deploy/data)
+2. Clicking "Add File" then "Upload File"
+3. Choosing the three csv's containing new data ("KYWSS_data.csv", "KYWSS_data_LOD.csv", and "ww_features.csv"). These are created from [ww_data_processing.py](../../python/ww_data_processing.py)
+4. Filling out Committ details
+5. Clicking "Commit changes"

@@ -1,0 +1,38 @@
+---
+title: "Dashboard data README"
+---
+
+# KYWSS Dashboard File Description
+- Use `kpdes` as the primary ID column for each unique sewershed polygon
+- Use `operation_area` as the primary ID column for region
+- Use `week_end` column as your date column
+
+## Spatial fetaures ([from WW_spatial_data.R](../../WW_spatial_data.R))
+1. ky_region_line.geojson
+    - These are line shapes are for the 5 operation areas/regions we are mapping
+2. ky_region_labels.geojson
+    - These are points (5 total) to label regions.
+3. ky_sewersheds_polygons.geojson
+    - These are polygons which represent sewersheds we're actively collecting samples from. A sewershed is the catchment area for sewage treated by a wastewater treatment plant.
+4. ky_counties_line.geojson
+    - These are county line shapes
+
+## WVAL data summarized 3 ways ([from WVAL_aggregate.py](../../python/WVAL_aggregate.py))
+1. KYWSS_WVAL_sewershed.csv
+    - This is the WVAL calculations by sewershed level
+2. KYWSS_WVAL_region.csv
+    - This is the WVAL calculations by region level with a row for state level
+3. KYWSS_WVAL_state.csv
+    - This is the WVAL calculations by state level only
+
+## Information on individual sewershed sites
+### Data
+1. ww_features.csv
+    - Contains extra info to join to sewersheds, such as first sample collect date, notes, and sewer capacity
+
+The ww_features.csv must be joined to the ky_sewersheds_polygons.geojson file to show attributes of each sewershed in maps or information boxes.
+
+# Notes on dashboard
+## NWSS WVAL data methods
+- please see: https://www.cdc.gov/nwss/about-data.html#data-method
+- & https://www.cdc.gov/nwss/rv/COVID19-currentlevels.html
