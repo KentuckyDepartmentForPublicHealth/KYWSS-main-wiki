@@ -3,7 +3,7 @@ title: "KYWSS Code Repo Wiki"
 ---
 
 # KYWSS Code Repository
-This wiki is for the primary KYWSS code repo. The KYWSS Code Repository is currently the catch-all for all KYWSS programming with both R and Python. The most important project is the wastewater data pipeline, which appends, validates, uploads to 1CDP, and calculates important metrics for our public and private dashboards and analyses (appending/validation/and upload is work in progress). The repo contains 10 routinely used scripts (8 python; 1 R) with over 2000 lines of custom code in total and 1200 additional lines of code adapted for use by KYWSS.
+This wiki is for the primary KYWSS code repo. The KYWSS Code Repository is currently the catch-all for all KYWSS programming with both R and Python. The most important project is the wastewater data pipeline, which appends, validates, uploads to 1CDP, and calculates important metrics for our public and private dashboards and analyses (appending/validation/and upload is work in progress). The repo contains 10 routinely used scripts (9 python; 1 R) with over 2000 lines of custom code in total and 1200 additional lines of code adapted for use by KYWSS.
 
 The following pages describe how to get started using this code repo.
 
@@ -64,4 +64,12 @@ The following pages describe how to get started using this code repo.
 
 # Script List
 1. `WW_data_pipeline.py`: Orchestrates processing of data using multiple scripts and steps
-2.
+2. `data_validation.py`: validates raw wastewater data before submission to 1CDP according to NWSS guidelines.
+3. `qc_flags.py`: adaptation of NWSS QC flag report (work in progress).
+4. `data_appending.py`: appends WW concentration data from labs to create the cumulative data set.
+5. `api_upload_1cdp.py`: uploads clean/cumulative WW data to 1CDP.
+6. `ww_data_processing.py`: preps data for WVAL calculation by deriving additional columns (e.g. flow rate adjusted viral concentration columns).
+7. `KYWSS_COVID_WVAL_CALC.py`: preps data and calculates the COVID19 WVAL at the site level
+8. `KYWSS_RSV_FLUA_WVAL_CALC.py`: preps data and calculates the fluav and rsv WVAL at the site level
+9. `WVAL_aggregate.py`: aggregates and categorizes WVAL to regional and state level
+10. `WW_spatial_data.R`: edits and creates all spatial data for KYWSS (e.g. sewershed boundaries).
