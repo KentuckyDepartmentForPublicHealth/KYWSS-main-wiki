@@ -17,6 +17,7 @@ The GitHub Action is defined by the build.yml file: [build.yml](https://github.c
 
 ## Updating data only
 To update data weekly, one can push new data to the "shiny-deploy" branch (default branch). This can be as easy as:
+
 1. Navigating to the [data folder](https://github.com/KentuckyDepartmentForPublicHealth/KYWSS-Internal-App/tree/shiny-deploy/data)
 2. Clicking "Add File" then "Upload File"
 3. Choosing the three csv's containing new data ("KYWSS_data.csv", "KYWSS_data_LOD.csv", and "ww_features.csv"). These are created from [ww_data_processing.py](../../python/ww_data_processing.py)

@@ -27,6 +27,7 @@ title: "Setting up project environment"
 
 # Download input files
 The following files must exist in the [ky_data](../../ky_data/) directory. Download them from the SharePoint folder: [/KYWSS-Home/ky-data/](https://kymsoffice.sharepoint.com/:f:/r/teams/KYWastewaterSurveillanceCHFSDPH-MSTeams/Shared%20Documents/KYWSS-Home/ky-data?csf=1&web=1&e=guHuhC)
+
 1. KYWSS_regions.csv
 2. KY_wastewater_sites.xlsx
 3. KySewersheds.geojson

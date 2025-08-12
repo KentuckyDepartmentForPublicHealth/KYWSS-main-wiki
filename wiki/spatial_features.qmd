@@ -9,12 +9,14 @@ Input files are listed in the source code and in the [setting-up-environment](se
 
 ## Instructions
 1. Open `WW_spatial_data.R` and click run or run from console (be sure you're in the project directory):
+
 ```r
 source("WW_spatial_data.R")
 ```
 
 # Output files
 `WW_spatial_data.R` produces the folliwng files in the `data/spatial-data/` directory.
+
 1. ky_sewersheds_polygons.geojson
 2. ky_sewersheds_centroids.geojson
 3. ky_state_line.geojson

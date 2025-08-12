@@ -28,19 +28,20 @@ The following pages describe how to get started using this code repo.
 
 # I/O File List
 ## Input files
-1. KYWSS_regions.csv
-2. KY_wastewater_sites.xlsx
-3. KySewersheds.geojson
-4. Ky_County_Polygons_WM_-3915653526132611478.geojson
-5. Ky_County_Polygons_WM_344776173949753501.csv
-6. DLS+UK+UL_COMBINED_Data.csv
-7. Ky_Major_Roads.geojson
-8. PLACES__County_Data__GIS_Friendly_Format___2024_release.csv
-9. WW_Popoulation.csv
+1. `KYWSS_regions.csv`
+2. `KY_wastewater_sites.xlsx`
+3. `KySewersheds.geojson`
+4. `Ky_County_Polygons_WM_-3915653526132611478.geojson`
+5. `Ky_County_Polygons_WM_344776173949753501.csv`
+6. `DLS+UK+UL_COMBINED_Data.csv`
+7. `Ky_Major_Roads.geojson`
+8. `PLACES__County_Data__GIS_Friendly_Format___2024_release.csv`
+9. `WW_Popoulation.csv`
 
 ## Output files
 ### Pipeline
 `WW_data_pipeline.py` produces the folliwng files in the `data/` directory.
+
 1.  ww_features.csv (site features for public and internal dashboard)
 2.  KYWSS_WVAL_sewershed.csv (For public dashboard)
 3.  KYWSS_WVAL_region.csv (For public dashboard)
@@ -50,17 +51,18 @@ The following pages describe how to get started using this code repo.
 
 ### Spatial Features
 `WW_spatial_data.R` produces the folliwng files in the `data/spatial-data/` directory.
-1. ky_sewersheds_polygons.geojson
-2. ky_sewersheds_centroids.geojson
-3. ky_state_line.geojson
-4. ky_region_line.geojson
-5. ky_region_centroids.geojson
-6. ky_region_labels.geojson
-7. ky_counties_line.geojson
-8. ky_counties_poly.geojson
-9. ky_counties_centroids.geojson
-10. ky_sewershed_poly_all.geojson
-11. ky_interstate_US.geojson
+
+1. `ky_sewersheds_polygons.geojson`
+2. `ky_sewersheds_centroids.geojson`
+3. `ky_state_line.geojson`
+4. `ky_region_line.geojson`
+5. `ky_region_centroids.geojson`
+6. `ky_region_labels.geojson`
+7. `ky_counties_line.geojson`
+8. `ky_counties_poly.geojson`
+9. `ky_counties_centroids.geojson`
+10. `ky_sewershed_poly_all.geojson`
+11. `ky_interstate_US.geojson`
 
 # Script List
 1. `WW_data_pipeline.py`: Orchestrates processing of data using multiple scripts and steps
