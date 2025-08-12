@@ -3,7 +3,7 @@ title: "Setting up project environment"
 ---
 
 > [!IMPORTANT]
-> See the software install instructions: [Software Install README](software_install_README.md) before setting up your environment.
+> See the software install instructions: [Software Install README](software_install_README.qmd) before setting up your environment.
 
 - [Steps](#steps)
 - [Clone code repo](#clone-code-repo)

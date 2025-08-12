@@ -5,7 +5,7 @@ title: "Spatial features"
 # Spatial Feature Creation
 The [WW_spatial_data.R](../../WW_spatial_data.R) file produced spatial features used for maps, analyses, visualizations, and dashboards.
 
-Input files are listed in the source code and in the [setting-up-environment](setting-up-environment.md) page.
+Input files are listed in the source code and in the [setting-up-environment](setting-up-environment.qmd) page.
 
 ## Instructions
 1. Open `WW_spatial_data.R` and click run or run from console (be sure you're in the project directory):

@@ -5,7 +5,7 @@ title: "Running the data pipeline"
 # How to run the wastewater data pipeline (ETL)
 The full pipeline is run using [WW_data_pipeline.py](../../WW_data_pipeline.py).
 
-After installing [system requirements](software_install_README.md) and [setting up your environment](setting-up-environment.md), you will be able to run `WW_data_pipeline.py`
+After installing [system requirements](software_install_README.qmd) and [setting up your environment](setting-up-environment.qmd), you will be able to run `WW_data_pipeline.py`
 
 Open Command Prompt in project directory, and run:
 ```python
