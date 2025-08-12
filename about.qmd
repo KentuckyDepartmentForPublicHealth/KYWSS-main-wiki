@@ -2,4 +2,4 @@
 title: "About"
 ---
 
-This wiki is for the primary KYWSS code repo. It is currently the catch-all for all KYWSS programming with both R and Python. The most important project is the wastewater data pipeline (ETL), which appends, validates, uploads to 1CDP, and calculates important metrics for our public and private dashboards and analyses. The repo contains 9 routinely used scripts (8 python; 1 R) with over 2000 lines of custom code in total and 800 additional lines of code adapted for use by KYWSS.
+This wiki is for the primary KYWSS code repo. The KYWSS Code Repository is currently the catch-all for all KYWSS programming with both R and Python. The most important project is the wastewater data pipeline, which appends, validates, uploads to 1CDP, and calculates important metrics for our public and private dashboards and analyses (appending/validation/and upload is work in progress). The repo contains 10 routinely used scripts (8 python; 1 R) with over 2000 lines of custom code in total and 1200 additional lines of code adapted for use by KYWSS.
